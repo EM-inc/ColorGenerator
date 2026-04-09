@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор Цветовых Палитр</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="icon">🎨</span> Генератор Цветовых Палитр</h1>
+            <p>Создавайте красивые цветовые палитры на основе ваших предпочтений</p>
+        </header>
+
+        <main>
+            <section class="preferences">
+                <h2>Ваши Предпочтения</h2>
+                <form id="preferences-form">
+                    <div class="preference-group">
+                        <label>Настроение:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="mood" value="calm" checked> Спокойное & Расслабляющее</label>
+                            <label><input type="radio" name="mood" value="vibrant"> Яркое & Энергичное</label>
+                            <label><input type="radio" name="mood" value="muted"> Приглушенное & Сдержанное</label>
+                            <label><input type="radio" name="mood" value="bold"> Смелое & Драматичное</label>
+                        </div>
+                    </div>
+
+                    <div class="preference-group">
+                        <label>Цветовая Температура:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="temperature" value="cool" checked> Холодная (Синие/Зеленые)</label>
+                            <label><input type="radio" name="temperature" value="warm"> Теплая (Красные/Желтые)</label>
+                            <label><input type="radio" name="temperature" value="neutral"> Нейтральная (Сбалансированная)</label>
+                        </div>
+                    </div>
+
+                    <div class="preference-group">
+                        <label>Времена Года:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="season" value="spring"> Весна</label>
+                            <label><input type="checkbox" name="season" value="summer"> Лето</label>
+                            <label><input type="checkbox" name="season" value="autumn"> Осень</label>
+                            <label><input type="checkbox" name="season" value="winter"> Зима</label>
+                        </div>
+                    </div>
+
+                    <div class="preference-group">
+                        <label>Размер Палитры:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="size" value="3" checked> 3 Цвета (Триадные)</label>
+                            <label><input type="radio" name="size" value="5"> 5 Цветов (Пентадные)</label>
+                            <label><input type="radio" name="size" value="7"> 7 Цветов (Расширенные)</label>
+                        </div>
+                    </div>
+
+                    <div class="preference-group">
+                        <label>Специальные Эффекты:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="effects" value="gradient"> Градиенты</label>
+                            <label><input type="checkbox" name="effects" value="accessible"> Высокая Контрастность</label>
+                            <label><input type="checkbox" name="effects" value="pastel"> Пастельные Тона</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="generate-btn">Сгенерировать Палитру</button>
+                </form>
+            </section>
+
+            <section class="palette-display">
+                <div class="palette-controls">
+                    <button id="randomize-btn" class="secondary-btn">Рандомизировать</button>
+                    <button id="copy-btn" class="secondary-btn">Копировать Цвета</button>
+                    <button id="save-btn" class="secondary-btn">Сохранить Палитру</button>
+                </div>
+                
+                <div id="color-palette" class="color-palette">
+                    <!-- Цвета будут генерироваться здесь -->
+                </div>
+
+                <div class="color-info">
+                    <div class="color-details">
+                        <h3>Детали Цвета</h3>
+                        <div id="color-details-content">
+                            <p>Выберите цвет для просмотра деталей</p>
+                        </div>
+                    </div>
+                    <div class="palette-info">
+                        <h3>Информация о Палитре</h3>
+                        <div id="palette-info-content">
+                            <p>Сгенерируйте палитру для просмотра информации</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>✨ Создавайте красивые, гармоничные цветовые схемы для ваших проектов</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
